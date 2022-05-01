@@ -2,6 +2,13 @@ package com.Projects;
 
 import java.util.Scanner;
 
+//Description of this Program .
+//Made By using :- Inbuilt 3 Classes :- 1. Scanner class and 2.Hash class 3.Hash Map class
+//              :- 1 Interface :- ATMInterface
+//              :- 3 UserDefined class :- 1. MainClass 2. ATM class 3. AtmOperationImplement class.
+//                                     :-  1. Main class holds all the main User ui Section.
+//                                     :-  2. ATM class holds 1 Constructor and getters and setters to return the amounts.
+//                                     :-  3. AtmoperationImplement class implemented by the interface class ATMInterface.
 public class MainClass {
     public static void main(String[] args){
 
