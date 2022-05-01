@@ -15,14 +15,16 @@ public class AtmOperationImplement implements ATMInterface{
 
     @Override
     public void withdrawAmount(double withdrawAmount) {
-        if(withdrawAmount <= atm.getBalance() ){
-            miniStat.put(withdrawAmount," Amount Withdrawn");
-            System.out.println("Collect the " + withdrawAmount + "Cash ");
-            atm.setBalance(atm.getBalance() - withdrawAmount);
-            viewBalance();
-        }
-        else {
-            System.out.println("Insufficient Balance !!");
+        if((withdrawAmount % 500)== 0){     //Here added the condition that user can only take cash in the Round figure number.
+                if(withdrawAmount <= atm.getBalance() ){
+                miniStat.put(withdrawAmount," Amount Withdrawn");
+                System.out.println("Collect the " + withdrawAmount + "Cash ");
+                atm.setBalance(atm.getBalance() - withdrawAmount);
+                viewBalance();
+            }
+            else {
+                System.out.println("Insufficient Balance !!");
+            }
         }
     }
 
