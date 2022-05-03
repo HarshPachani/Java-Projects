@@ -1,13 +1,13 @@
-package com.Projects;
+package com.Projects.atm;
 
 public class ATM {
     private double balance;
-    private double depositeAmount;
+    private double depositAmount;
     private double withdrawAmount;
 
     //Default constructor.
     public ATM(){
-
+        System.out.println("Welcome to ATM");
     }
 
     //getters and setters
@@ -19,12 +19,12 @@ public class ATM {
         this.balance = balance;
     }
 
-    public double getDepositeAmount() {
-        return depositeAmount;
+    public double getDepositAmount() {
+        return depositAmount;
     }
 
-    public void setDepositeAmount(double depositeAmount) {
-        this.depositeAmount = depositeAmount;
+    public void setDepositAmount(double depositAmount) {
+        this.depositAmount = depositAmount;
     }
 
     public double getWithdrawAmount() {

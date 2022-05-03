@@ -1,8 +1,8 @@
-package com.Projects;
+package com.Projects.atm;
 
 public interface ATMInterface {
     public void viewBalance();
     public void withdrawAmount(double withdrawAmount);
-    public void depositeAmount(double depositeAmount);
+    public void depositAmount(double depositAmount);
     public void viewMiniStatement();
 }

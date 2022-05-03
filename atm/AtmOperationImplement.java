@@ -1,4 +1,4 @@
-package com.Projects;
+package com.Projects.atm;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -29,10 +29,10 @@ public class AtmOperationImplement implements ATMInterface{
     }
 
     @Override
-    public void depositeAmount(double depositeAmount) {
-        miniStat.put(depositeAmount," Amount Deposited");
-        System.out.println(depositeAmount+" Deposited Successfully !!");
-        atm.setBalance(atm.getBalance() + depositeAmount);
+    public void depositAmount(double depositAmount) {
+        miniStat.put(depositAmount," Amount Deposited");
+        System.out.println(depositAmount+" Deposited Successfully !!");
+        atm.setBalance(atm.getBalance() + depositAmount);
         viewBalance();
     }
 

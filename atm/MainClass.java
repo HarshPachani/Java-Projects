@@ -1,11 +1,11 @@
-package com.Projects;
+package com.Projects.atm;
 
 import java.util.Scanner;
 
-//Description of this Program .
-//Made By using :- Inbuilt 3 Classes :- 1. Scanner class and 2.Hash class 3.Hash Map class
-//              :- 1 Interface :- ATMInterface
-//              :- 3 UserDefined class :- 1. MainClass 2. ATM class 3. AtmOperationImplement class.
+//Description of this Program:-
+//Made This using :- Inbuilt 3 Classes :- 1. Scanner class and 2.Hash class 3.Hash Map class
+//                :- 1 Interface :- ATMInterface
+//                :- 3 UserDefined class :- 1. MainClass 2. ATM class 3. AtmOperationImplement class.
 //                                     :-  1. Main class holds all the main User ui Section.
 //                                     :-  2. ATM class holds 1 Constructor and getters and setters to return the amounts.
 //                                     :-  3. AtmoperationImplement class implemented by the interface class ATMInterface.
@@ -18,7 +18,7 @@ public class MainClass {
         System.out.println("\t\t\t\t\t\t\t\t\t\t\tWelcome to ATM Machine");
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Enter ATM number : ");
+        System.out.println("Enter Account number : ");
         int atm = sc.nextInt();
         System.out.println("Enter Pin:");
         int pin = sc.nextInt();
@@ -26,22 +26,26 @@ public class MainClass {
         if((atmNum == atm) && (atmPin==pin) )
         {
             while (true){
-                System.out.println("1. View Available Balance\n2.Withdraw Amount\n3.Deposite the Amount\n4.View Mini Statement\n5.Exit");
+                System.out.println("1. View Available Balance\n2.Withdraw Amount\n3.Deposit the Amount\n4.View Mini Statement\n5.Exit");
                 System.out.println("Enter your choice :");
                 int ch = sc.nextInt();
                 if(ch == 1){
                     op.viewBalance();
-                } else if (ch == 2) {
+                }
+                else if (ch == 2) {
                     System.out.println("Enter Amount to Withdraw : ");
                     double withdrawAmount = sc.nextDouble();
                     op.withdrawAmount(withdrawAmount);
-                }else if (ch == 3) {
+                }
+                else if (ch == 3) {
                     System.out.println("Enter the Amount to deposite :");
                     double depo = sc.nextDouble();
-                    op.depositeAmount(depo);
-                }else if (ch == 4) {
+                    op.depositAmount(depo);
+                }
+                else if (ch == 4) {
                     op.viewMiniStatement();
-                }else if (ch == 5) {
+                }
+                else if (ch == 5) {
                     System.out.println("You Exitted Successfully!");
                     System.out.println("Collect your ATM card!");
                     System.exit(0);
@@ -52,7 +56,7 @@ public class MainClass {
             }
         }
         else {
-            System.out.println("Incorrect ATM number or Pin!");
+            System.out.println("Incorrect Account number or Pin!");
         }
 
         System.out.println("Thank you!");
